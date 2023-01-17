@@ -1,7 +1,10 @@
 
 .joke {
-    background-color: #00ace6;
-    text-align: center;
+  margin: auto;
+  width: 50%;
+  border: 6px solid green;
+  padding: 10px;
+  text-align:center;
 }
 #setup {
     font-weight: bold;
