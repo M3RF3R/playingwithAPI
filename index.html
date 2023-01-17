@@ -2,24 +2,32 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <title>The weather</title>
-</head>
-<body>
-
-<h1>Hi</h1>
-<p>This is a paragraph.</p>
- 
-<script type="text/javascript">
-
-const api_url ="https://official-joke-api.appspot.com/random_joke";
-
-async function getapi(url)
+  <title>Joke of the day</title>
+ <script>
+  async function getapi(url)
 {
   const response = await fetch(url);
   var data = await response.json();
   console.log(data);
+  document.getElementById("id-joke").innerHTML = data.id;
+  document.getElementById("setup").innerHTML = data.setup;
+  document.getElementById("punchline").innerHTML = data.punchline;
 }
+  </script>
+</head>
+<body>
+ 
+ <div class="joke">
+     <div class="identificador">Joke nº <span id="id-joke"></span></div>
+     <div id="setup"></div>
+     <div id="punchline"></div>
+ </div>
 
+ 
+<script type="text/javascript">
+
+const api_url ="https://official-joke-api.appspot.com/random_joke";
+ 
 getapi(api_url);
 
 </script>
