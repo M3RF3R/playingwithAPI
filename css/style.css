@@ -2,7 +2,7 @@
 .joke {
   margin: auto;
   width: 50%;
-  border: 6px solid green;
+  background-color:solid green;
   padding: 10px;
   text-align:center;
 }
